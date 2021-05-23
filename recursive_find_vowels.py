@@ -8,14 +8,13 @@ def vowelsIter(string):
                 numbVowels +=1
     return numbVowels
 
-print(vowelsIter('educative'))
+#print(vowelsIter('educative'))
 
 #recursive version
-def vowelsRecu(string,n,list):
-    if n==1 and 
-
+def vowelsRecu(string):
+    if not string:
+            return 0
+    return (1 if string[0] in 'aeiouAEIOU' else 0) + vowelsRecu(string[1:])
 
 string='educative'
-n=len(string)
-listVowels='aeiou'
-print(vowelsRecu(string,n,listVowels))
+print(vowelsRecu(string))
